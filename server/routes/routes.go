@@ -14,7 +14,7 @@ func InitRouter() {
 	router := mux.NewRouter()
 
 	router.HandleFunc("/products", controllers.GetProducts).Methods("GET")
-	router.HandleFunc("/product/{id}", controllers.GetProduct).Methods("GET")
+	router.HandleFunc("/products/{id}", controllers.GetProduct).Methods("GET")
 	router.HandleFunc("/products", controllers.AddProduct).Methods("POST")
 	router.HandleFunc("/products/{id}", controllers.UpdateProduct).Methods("PUT")
 	router.HandleFunc("/products/{id}", controllers.DeleteProduct).Methods("DELETE")
