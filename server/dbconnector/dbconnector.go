@@ -2,6 +2,7 @@ package dbconnector
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/niloysikdar/Sell-It/server/models"
 	"gorm.io/driver/sqlite"
@@ -16,8 +17,8 @@ func InitialMigration() {
 	db, err := gorm.Open(sqlite.Open("products.db"), &gorm.Config{})
 
 	if err != nil {
-		fmt.Println(err.Error())
-		panic("Failed to connect to DB !")
+		fmt.Println("Failed to connect to DB !")
+		log.Fatal(err.Error())
 	}
 
 	DB = db
