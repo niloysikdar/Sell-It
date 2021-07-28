@@ -5,12 +5,15 @@ import (
 	"log"
 	"net/http"
 
-	"./controllers"
+	"github.com/niloysikdar/Sell-It/server/controllers"
+	"github.com/niloysikdar/Sell-It/server/dbconnector"
 
 	"github.com/gorilla/mux"
 )
 
 func main() {
+	dbconnector.InitialMigration()
+	initRouter()
 	fmt.Println("Hello World")
 
 }
