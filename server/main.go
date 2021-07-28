@@ -1,9 +1,11 @@
 package main
 
 import (
-	"fmt"
+	"github.com/niloysikdar/Sell-It/server/dbconnector"
+	"github.com/niloysikdar/Sell-It/server/routes"
 )
 
 func main() {
-	fmt.Println("Hello World")
+	dbconnector.InitialMigration()
+	routes.InitRouter()
 }
