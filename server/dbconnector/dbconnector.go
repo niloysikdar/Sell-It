@@ -4,10 +4,12 @@ import (
 	"fmt"
 
 	"github.com/niloysikdar/Sell-It/server/models"
-
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
+
+// DB ...
+var DB *gorm.DB
 
 // InitialMigration ...
 func InitialMigration() {
@@ -18,6 +20,7 @@ func InitialMigration() {
 		panic("Failed to connect to DB !")
 	}
 
-	db.AutoMigrate(&models.Product{})
-	fmt.Println("DB Has been connected successfully")
+	DB = db
+	DB.AutoMigrate(&models.Product{})
+	fmt.Println("DB Has been connected successfully ....")
 }

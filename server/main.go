@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 
@@ -14,8 +13,6 @@ import (
 func main() {
 	dbconnector.InitialMigration()
 	initRouter()
-	fmt.Println("Hello World")
-
 }
 
 func initRouter() {
