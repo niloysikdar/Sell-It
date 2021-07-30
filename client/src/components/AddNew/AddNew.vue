@@ -1,21 +1,81 @@
 <template>
   <div class="new">
     <h2>Add a new Product</h2>
-    <form>
-      <input type="text" placeholder="Product Name" required />
-      <input type="text" placeholder="Description" required />
-      <input type="text" placeholder="Price" required />
-      <input type="url" placeholder="Image URL" required />
-      <input type="text" placeholder="Address" required />
-      <input type="text" placeholder="Seller Name" required />
-      <input type="text" placeholder="Contact Info" required />
+    <form @submit="addProduct" method="post">
+      <input
+        type="text"
+        placeholder="Product Name"
+        required
+        v-model="product.productName"
+      />
+      <input
+        type="text"
+        placeholder="Description"
+        required
+        v-model="product.description"
+      />
+      <input type="text" placeholder="Price" required v-model="product.price" />
+      <input
+        type="url"
+        placeholder="Image URL"
+        required
+        v-model="product.imageurl"
+      />
+      <input
+        type="text"
+        placeholder="Address"
+        required
+        v-model="product.address"
+      />
+      <input
+        type="text"
+        placeholder="Seller Name"
+        required
+        v-model="product.sellerName"
+      />
+      <input
+        type="text"
+        placeholder="Contact Info"
+        required
+        v-model="product.contactInfo"
+      />
       <button type="submit">ADD</button>
     </form>
   </div>
 </template>
 
 <script>
-export default {};
+import axios from "axios";
+import router from "../../router/index";
+export default {
+  data() {
+    return {
+      product: {
+        productName: null,
+        description: null,
+        price: null,
+        imageurl: null,
+        address: null,
+        sellerName: null,
+        contactInfo: null,
+        isSold: false,
+      },
+    };
+  },
+  methods: {
+    async addProduct(e) {
+      e.preventDefault();
+      console.log(JSON.stringify(this.product));
+      const result = await axios.post(
+        process.env.VUE_APP_BASEURL,
+        JSON.stringify(this.product)
+      );
+      if (result.data) {
+        router.replace("/");
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>
