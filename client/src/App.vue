@@ -1,17 +1,17 @@
 <template>
-  <Hello />
+  <main id="app">
+    <ProductPage />
+  </main>
 </template>
 
-
 <script>
-import Hello from "./components/Hello";
+import ProductPage from "./components/ProductPage.vue";
 export default {
   components: {
-    Hello,
+    ProductPage,
   },
 };
 </script>
-
 
 <style>
 * {
