@@ -11,6 +11,7 @@ import (
 
 // GetProducts for getting all the products from DB
 func GetProducts(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Content-Type", "application/json")
 	var products []models.Product
 	dbconnector.DB.Find(&products)
@@ -19,6 +20,7 @@ func GetProducts(w http.ResponseWriter, r *http.Request) {
 
 // GetProduct for getting a particular product from DB
 func GetProduct(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Content-Type", "application/json")
 	id := mux.Vars(r)["id"]
 	var product models.Product
@@ -28,6 +30,7 @@ func GetProduct(w http.ResponseWriter, r *http.Request) {
 
 // AddProduct for adding a product to DB
 func AddProduct(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Content-Type", "application/json")
 	var product models.Product
 	json.NewDecoder(r.Body).Decode(&product)
@@ -37,6 +40,7 @@ func AddProduct(w http.ResponseWriter, r *http.Request) {
 
 // UpdateProduct for updating a particular product in DB
 func UpdateProduct(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Content-Type", "application/json")
 	id := mux.Vars(r)["id"]
 	var product models.Product
@@ -51,6 +55,7 @@ func UpdateProduct(w http.ResponseWriter, r *http.Request) {
 
 // DeleteProduct for deleting a product from DB
 func DeleteProduct(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Content-Type", "application/json")
 	id := mux.Vars(r)["id"]
 	var product models.Product

@@ -19,6 +19,8 @@ func InitRouter() {
 	router.HandleFunc("/products/{id}", controllers.UpdateProduct).Methods("PUT")
 	router.HandleFunc("/products/{id}", controllers.DeleteProduct).Methods("DELETE")
 
+	router.Use(mux.CORSMethodMiddleware(router))
+
 	err := http.ListenAndServe(":5000", router)
 	if err != nil {
 		log.Fatal(err.Error())
