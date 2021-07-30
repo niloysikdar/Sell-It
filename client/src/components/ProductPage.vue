@@ -1,6 +1,6 @@
 <template>
   <section class="products-main">
-    <h2>All products for sale</h2>
+    <h2>Products for sale</h2>
     <div class="products">
       <Product
         v-for="product in products"
@@ -81,10 +81,13 @@ export default {
   justify-content: flex-start;
   align-items: center;
   padding: 30px;
+  background: #c0e0e0;
 }
 
 .products-main h2 {
   margin-bottom: 30px;
+  color: #1e57ad;
+  font-size: 2rem;
 }
 
 .products {
@@ -94,5 +97,17 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
   gap: 50px;
+}
+
+.new {
+  position: fixed;
+  top: 1.5rem;
+  right: 5rem;
+  height: 100px;
+  width: 100px;
+  font-size: 2rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
 }
 </style>
