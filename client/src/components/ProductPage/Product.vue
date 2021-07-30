@@ -1,7 +1,7 @@
 <template>
   <div class="product">
     <div class="product-image">
-      <img :src="product.imageurl" height="250" width="250" />
+      <img :src="product.imageurl" height="250" width="300" />
     </div>
     <div class="product-text">
       <h3>{{ product.productName }}</h3>
@@ -24,7 +24,7 @@ export default {
 
 <style scoped>
 .product {
-  max-width: 250px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,7 +37,7 @@ export default {
 }
 
 .product-text {
-  padding: 10px;
+  padding: 10px 10px;
 }
 
 .product-text h3 {
