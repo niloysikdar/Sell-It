@@ -1,7 +1,12 @@
 <template>
   <div class="product">
     <div class="product-image">
-      <img :src="product.imageurl" height="250" width="300" />
+      <img
+        :src="product.imageurl"
+        :alt="product.productName"
+        height="250"
+        width="300"
+      />
     </div>
     <div class="product-text">
       <h3>{{ product.productName }}</h3>
