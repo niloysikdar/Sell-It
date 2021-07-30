@@ -1,7 +1,7 @@
 <template>
   <header>
-    <h2>Sell It</h2>
-    <button>Add New</button>
+    <router-link to="/" class="logo">Sell It</router-link>
+    <router-link to="/new" class="button">Add New</router-link>
   </header>
 </template>
 
@@ -23,14 +23,16 @@ header {
   align-items: center;
 }
 
-header h2 {
-  font-size: 2rem;
+.logo {
+  font-size: 2.2rem;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
   color: #1c4e97;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-button {
+.button {
   outline: none;
   border: none;
   border-radius: 10px;
@@ -40,5 +42,6 @@ button {
   font-size: 1.3rem;
   margin-right: 30px;
   cursor: pointer;
+  text-decoration: none;
 }
 </style>
