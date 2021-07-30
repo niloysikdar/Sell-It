@@ -52,7 +52,7 @@ export default {
           isSold: false,
         },
         {
-          ID: 2,
+          ID: 3,
           CreatedAt: "2021-07-29T03:49:58.9381337+05:30",
           UpdatedAt: "2021-07-29T03:49:58.9381337+05:30",
           DeletedAt: null,
@@ -81,6 +81,7 @@ export default {
   justify-content: flex-start;
   align-items: center;
   padding: 30px;
+  padding-top: 110px;
   background: #c0e0e0;
 }
 

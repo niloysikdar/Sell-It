@@ -1,13 +1,16 @@
 <template>
   <main id="app">
+    <Navbar />
     <ProductPage />
   </main>
 </template>
 
 <script>
+import Navbar from "./components/Navbar/Navbar";
 import ProductPage from "./components/ProductPage/ProductPage";
 export default {
   components: {
+    Navbar,
     ProductPage,
   },
 };
