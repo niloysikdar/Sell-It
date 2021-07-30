@@ -65,7 +65,6 @@ export default {
   methods: {
     async addProduct(e) {
       e.preventDefault();
-      console.log(JSON.stringify(this.product));
       const result = await axios.post(
         process.env.VUE_APP_BASEURL,
         JSON.stringify(this.product)
@@ -114,7 +113,7 @@ export default {
   border: none;
   color: #000;
   margin-bottom: 17px;
-  padding: 10px;
+  padding: 12px;
   width: 100%;
   border-radius: 10px;
   font-size: 1.1rem;
