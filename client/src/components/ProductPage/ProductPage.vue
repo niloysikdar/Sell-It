@@ -13,61 +13,20 @@
 
 <script>
 import Product from "./Product.vue";
+import axios from "axios";
+
 export default {
   components: {
     Product,
   },
+  async mounted() {
+    const URL = process.env.VUE_APP_BASEURL;
+    const result = await axios.get(URL);
+    this.products = result.data;
+  },
   data() {
     return {
-      products: [
-        {
-          ID: 1,
-          CreatedAt: "2021-07-29T03:49:58.9381337+05:30",
-          UpdatedAt: "2021-07-29T03:49:58.9381337+05:30",
-          DeletedAt: null,
-          productName: "Math Book",
-          description: "I want to sell my Math Book which is only 1 year old",
-          price: "Rs. 350",
-          imageurl:
-            "https://images-na.ssl-images-amazon.com/images/I/81OrIk+OffL.jpg",
-          address: "India",
-          sellerName: "Niloy Sikdar",
-          contactInfo: "9541236547",
-          isSold: false,
-        },
-        {
-          ID: 2,
-          CreatedAt: "2021-07-29T03:49:58.9381337+05:30",
-          UpdatedAt: "2021-07-29T03:49:58.9381337+05:30",
-          DeletedAt: null,
-          productName: "Science Book",
-          description:
-            "I want to sell my Science Book which is only 1 year old",
-          price: "Rs. 350",
-          imageurl:
-            "https://images-na.ssl-images-amazon.com/images/I/81OrIk+OffL.jpg",
-          address: "India",
-          sellerName: "Niloy Sikdar",
-          contactInfo: "9541236547",
-          isSold: false,
-        },
-        {
-          ID: 3,
-          CreatedAt: "2021-07-29T03:49:58.9381337+05:30",
-          UpdatedAt: "2021-07-29T03:49:58.9381337+05:30",
-          DeletedAt: null,
-          productName: "Science Book",
-          description:
-            "I want to sell my Science Book which is only 1 year old",
-          price: "Rs. 350",
-          imageurl:
-            "https://images-na.ssl-images-amazon.com/images/I/81OrIk+OffL.jpg",
-          address: "India",
-          sellerName: "Niloy Sikdar",
-          contactInfo: "9541236547",
-          isSold: false,
-        },
-      ],
+      products: [],
     };
   },
 };
