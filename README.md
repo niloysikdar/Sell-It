@@ -13,7 +13,7 @@
 
 ## DESCRIPTION 💡
 
-### Sell It is a plaform where users can sell and buy new as well as old/used products.
+### Sell It is a platform where users can sell and buy new as well as old/used products.
 
 ### Server side code is written in [Go](https://golang.org), used [Gorilla Mux](https://pkg.go.dev/github.com/gorilla/mux)
 
