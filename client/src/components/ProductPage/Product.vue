@@ -13,17 +13,34 @@
       <h4>{{ product.price }}</h4>
       <p>{{ product.description }}</p>
       <div class="buttons">
-        <button>Details</button>
+        <button @click="gotoDetails">Details</button>
         <button>Edit</button>
       </div>
-      <button class="delete">Delete</button>
+      <button class="delete" @click="deletePost">Delete</button>
     </div>
   </div>
 </template>
 
 <script>
+import router from "../../router/index";
+// import axios from "axios";
+
 export default {
   props: ["product"],
+  methods: {
+    async deletePost() {
+      // const deleteURL = `${process.env.VUE_APP_BASEURL}/${this.product.ID}`;
+      // console.log(deleteURL);
+      // const result = await axios.delete(deleteURL);
+      // if (result.status === 200) {
+      //   window.location.reload();
+      // }
+      console.log(this.product.ID);
+    },
+    gotoDetails() {
+      router.push(`/details/${this.product?.ID}`);
+    },
+  },
 };
 </script>
 
@@ -32,7 +49,7 @@ export default {
   max-width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   border-radius: 15px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
