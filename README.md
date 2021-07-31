@@ -64,10 +64,10 @@ yarn serve
 ## SCREENSHOTS 👀
 
 <p align="center">
-<img src="https://i.imgur.com/6YH6XOC.png" width="450">
-<img src="https://i.imgur.com/0t2vD9N.png" width="450">
-<img src="https://i.imgur.com/vgYe99v.png" width="450">
-<img src="https://i.imgur.com/Wd3kSZC.png" width="450">
+<img src="https://i.imgur.com/6YH6XOC.png" width="400">
+<img src="https://i.imgur.com/0t2vD9N.png" width="400">
+<img src="https://i.imgur.com/vgYe99v.png" width="400">
+<img src="https://i.imgur.com/Wd3kSZC.png" width="400">
 </p>
 
 ## LICENSE 📝
