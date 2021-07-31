@@ -13,7 +13,7 @@
       <h4>{{ product.price }}</h4>
       <p>{{ product.description }}</p>
       <div class="buttons">
-        <button>Details</button>
+        <button @click="gotoDetails">Details</button>
         <button>Edit</button>
       </div>
       <button class="delete" @click="deletePost">Delete</button>
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import router from "../../router/index";
 // import axios from "axios";
 
 export default {
@@ -35,6 +36,9 @@ export default {
       //   window.location.reload();
       // }
       console.log(this.product.ID);
+    },
+    gotoDetails() {
+      router.push(`/details/${this.product?.ID}`);
     },
   },
 };

@@ -99,7 +99,7 @@ export default {
 
 .details-text .sellerInfo {
   color: #0e2d5c;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
 }
 
 button {
