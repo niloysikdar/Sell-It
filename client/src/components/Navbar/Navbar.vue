@@ -25,7 +25,7 @@ header {
 
 .logo {
   font-size: 2.2rem;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.4rem;
   text-transform: uppercase;
   color: #1c4e97;
   text-decoration: none;
