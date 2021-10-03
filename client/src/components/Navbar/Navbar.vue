@@ -1,7 +1,11 @@
 <template>
   <header>
     <router-link to="/" class="logo">Sell It</router-link>
+        <div>
     <router-link to="/new" class="button">Add New</router-link>
+     <!-- Render the SignIn Button only if the User is not Logged In -->
+    <router-link to="/signin" class="button">SignIn</router-link>
+    </div> 
   </header>
 </template>
 
